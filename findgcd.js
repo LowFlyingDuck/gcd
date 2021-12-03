@@ -4,6 +4,9 @@ const gcd = (a, b) => (a % b === 0) ? a >= b ? b : a : (console.log(a + ' = ' + 
 const encrypt = (m, e, n) => BigInt(m)**BigInt(e) % BigInt(n);
 const decrypt = (c, d, n) => BigInt(c)**BigInt(d) % BigInt(n);
 
+const sign = (m, d, n) => BigInt(m)**BigInt(d) % BigInt(n);
+const verify = (m, e, n) => BigInt(m)**BigInt(e) % BigInt(n);
+
 const getD = (p, q, e) => { let i = 0; console.log('1 = x ' + ' * ' + e + ' mod ' + (p-1)*(q-1)); while((i*e) % ((p-1)*(q-1)) !== 1) i++; return i; } 
 
 const p = 37;
